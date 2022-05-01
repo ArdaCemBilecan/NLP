@@ -14,8 +14,7 @@ def genres_and_keywords_to_string(row):
     return "%s  %s" % (genres,keywords)
     # return example : 'Action Adventure Fantasy ScienceFiction  cultureclash future spacewar spacecolony society spacetravel 
         #futuristic romance space alien tribe alienplanet cgi marine soldier battle loveaffair antiwar powerrelations mindandsoul 3d'
-
-    
+   
 
 df = pd.read_csv('tmdb_5000_movies.csv')
 df['string'] = df.apply(genres_and_keywords_to_string,axis=1)
